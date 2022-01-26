@@ -1,0 +1,79 @@
+﻿@model TuraliWeb.Models.ViewModel
+
+<nav id="topBar">
+    <div class="container">
+
+
+        <ul>
+            <li>
+                <a href="#">Kategoriler <i class="fa fa-angle-down"></i></a>
+                <ul class="subMenu">
+                    <li>
+                        @Html.ActionLink("TümKategoriler", "AllList")
+
+                        @*<a id="" href="#">TümKategoriler&nbsp;<i class="fa fa-angle-right"></i></a>*@
+                    </li>
+                    @foreach (var cat in Model.Categories)
+                    {
+                        <li>
+
+                            <a id="@cat.Id" href="#">@cat.Name&nbsp;<i class="fa fa-angle-right"></i></a>
+                            <ul class="subMenu">
+
+
+                                <li><a id="@cat.Id" href="Home/SubCategoriList/@cat.Id">@cat.Name Kategori Listesi&nbsp;</a> </li>
+                                @foreach (var cat2 in Model.SubCategories)
+                                {
+                                    if (cat2.CategoryId == cat.Id)
+                                    {
+
+                                        <li>
+                                            <a id="@cat2.Id" href="#">
+                                                @cat2.Name <br /> @cat2.Description
+                                                &nbsp;<i class="fa fa-angle-right"></i>
+                                            </a>
+
+                                            <ul class="subMenu">
+                                                <li><a id="@cat2.Id" href="Home/SubSubCategoriList/@cat2.Id">@cat2.Name Kategori Listesi&nbsp;</a> </li>
+                                                @foreach (var cat3 in Model.SubSubCategories)
+                                                {
+                                                    if (cat3.SubCategoryId == cat2.Id)
+                                                    {
+                                                        <li>
+                                                            <a id="@cat3.Id" href="#">@cat3.Name &nbsp;<i class="fa fa-angle-right"></i></a>
+                                                            <ul class="subMenu">
+                                                                <li><a id="@cat3.Id" href="#">@cat3.Name Kategori Listesi&nbsp;</a> </li>
+                                                                @foreach (var product in Model.Products)
+                                                                {
+                                                                    if (product.SubSubCategoryId == cat3.Id)
+                                                                    {
+                                                                        <li><a id="@product.Id" href="#">@product.Name</a></li>
+                                                                    }
+
+                                                                }
+
+                                                            </ul>
+                                                        </li>
+                                                    }
+                                                }
+
+                                            </ul>
+                                        </li>
+                                    }
+                                }
+
+                            </ul>
+                        </li>
+                    }
+
+                </ul>
+                
+            </li>
+            @Html.ActionLink("Tüm Ürünler","AllProductsList")
+        </ul>
+        
+    </div>
+</nav>
+
+
+<script src="~/Scripts/nav.js"></script>

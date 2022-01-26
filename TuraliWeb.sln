@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuraliWeb", "TuraliWeb\TuraliWeb.csproj", "{6533FDD1-4E23-4A08-8E29-3FD5ACB768C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6533FDD1-4E23-4A08-8E29-3FD5ACB768C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6533FDD1-4E23-4A08-8E29-3FD5ACB768C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6533FDD1-4E23-4A08-8E29-3FD5ACB768C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6533FDD1-4E23-4A08-8E29-3FD5ACB768C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7A81485-E29F-4643-B9E5-8829D3BC79DD}
+	EndGlobalSection
+EndGlobal

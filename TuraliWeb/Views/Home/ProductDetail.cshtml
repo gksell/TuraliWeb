@@ -1,0 +1,59 @@
+﻿@model TuraliWeb.Models.Products
+@{
+    ViewBag.Title = "ProductDetail";
+}
+
+<h2>ProductDetail</h2>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <img class="img-fluid mx-auto d-block " src="~/Image/Categories/SubCategories/SubSubCategories/Products/@Model.Image" alt="iphone11">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>@Model.Name</h1>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    <span class="badge badge-primary"> Stokta </span>
+                    
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <div id="descrption">
+                        @Model.Description
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-8">
+                    <a href="~/PDF/@Model.PDF">
+                        <p>@Model.PDF <i class="fas fa-file-pdf"></i></p>     
+                    </a>
+
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12  ">
+                    <h2 id="product-price"> @Model.Price Tl <h2>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-cart-plus"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

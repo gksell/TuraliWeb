@@ -1,0 +1,40 @@
+﻿@model IEnumerable<TuraliWeb.Models.Category>
+@{
+    ViewBag.Title = "AllList";
+}
+<div class="container my-5">
+    <div class="col-md-12">
+
+
+
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail">
+
+                        <img src="~/Image/Categories/@item.Image" />
+                        <div class="caption">
+                            <h4>
+
+                                <a href="SubCategoriList/@item.Id">@item.Name</a>
+                            </h4>
+                            <p>@item.Description</p>
+                        </div>
+                        <div class="ratings">
+                            <p> Bu Kategoride listelenen @item.SubCategories.Count ürün var.</p>
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+
+
+        </div>
+
+    </div>
+</div>
