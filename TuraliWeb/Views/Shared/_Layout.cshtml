@@ -6,8 +6,12 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="~/Content/render.css" rel="stylesheet" />
+
     <link href="~/Content/nav.css" rel="stylesheet" />
+    <link href="~/Content/slide.css" rel="stylesheet" />
+    <link href="~/Content/render.css" rel="stylesheet" />
+    
+
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,12 +19,8 @@
         @Html.Action("_NavPartial", "Home")
     </div>
 
-    <div class="container body-content">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+    <div class="container body-content ">
+        
         @RenderBody()
         <hr />
     </div>

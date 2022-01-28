@@ -10,14 +10,14 @@ namespace TuraliWeb.Controllers
 {
     public class HomeController : Controller
     {
-         private DatabaseContext db = new DatabaseContext();
+        private DatabaseContext db = new DatabaseContext();
         // GET: Home
         public ActionResult Index()
         {
             ViewModel vm = new ViewModel();
             vm.Categories = db.Category.ToList();
             vm.SubCategories = db.SubCategories.ToList();
-            vm.SubSubCategories= db.SubSubCategories.ToList();
+            vm.SubSubCategories = db.SubSubCategories.ToList();
             vm.Products = db.Products.ToList();
             return View(vm);
         }
@@ -28,7 +28,7 @@ namespace TuraliWeb.Controllers
             vm.SubCategories = db.SubCategories.ToList();
             vm.SubSubCategories = db.SubSubCategories.ToList();
             vm.Products = db.Products.ToList();
-            return PartialView("_NavPartial",vm);
+            return PartialView("_NavPartial", vm);
         }
         public ActionResult AllList()
         {
@@ -48,7 +48,7 @@ namespace TuraliWeb.Controllers
             }
 
             var k = subCategory.SubCategories.ToList();
-             
+
             return View(k);
         }
         public ActionResult SubSubCategoriList(int? id)
@@ -73,7 +73,7 @@ namespace TuraliWeb.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-           SubSubCategory subSubCategory = db.SubSubCategories.Find(id);
+            SubSubCategory subSubCategory = db.SubSubCategories.Find(id);
             if (subSubCategory == null)
             {
                 return HttpNotFound();
@@ -102,6 +102,11 @@ namespace TuraliWeb.Controllers
 
             return View(products);
         }
+
+        public ActionResult UcBoyut(){
+            return View();
+        }
+
 
     }
 }

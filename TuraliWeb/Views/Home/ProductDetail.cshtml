@@ -3,7 +3,8 @@
     ViewBag.Title = "ProductDetail";
 }
 
-<h2>ProductDetail</h2>
+<h1 class="text-center font-weight-bold">ProductDetail</h1>
+<hr />
 <div class="container my-5">
     <div class="row">
         <div class="col-md-6">
@@ -35,7 +36,10 @@
             <div class="row mt-3">
                 <div class="col-md-8">
                     <a href="~/PDF/@Model.PDF">
-                        <p>@Model.PDF <i class="fas fa-file-pdf"></i></p>     
+                        <p>@Model.PDF <i class="fas fa-file-pdf"></i></p>
+                    </a>
+                    <a href="/Home/UcBoyut">
+                        <p>@Model.Image <i class="fab fa-unity"></i></p>
                     </a>
 
                 </div>
@@ -55,5 +59,4 @@
             </div>
         </div>
     </div>
-    
 </div>

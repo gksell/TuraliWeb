@@ -3,40 +3,33 @@
     ViewBag.Title = "Products";
 }
 
-<h2>Products</h2>
+<h1 class="text-center font-weight-bold">Products</h1>
+<hr />
+<div class="container  my-5">
+    <div class="col-md-12">
+        <div class="row">
 
-<div class="col-md-12">
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail">
 
+                        <img src="~/Image/Categories/SubCategories/SubSubCategories/Products/@item.Image" style="max-height:10rem; max-width:100rem;" />
+                        <div class="caption">
 
+                            <h4>
 
-    <div class="row">
-
-        @foreach (var item in Model)
-        {
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
-
-                    <img src="~/Image/Categories/SubCategories/SubSubCategories/Products/@item.Image" />
-                    <div class="caption">
-                        
-                        <h4>
-
-                            <a id="@item.Id" href="/Home/ProductDetail/@item.Id">@item.Name</a>
-                        </h4>
-                        <p>@item.Description<a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                    </div>
-                    <div class="ratings">
-                        <p>  @item.Price TL </p>
+                                <a id="@item.Id" href="/Home/ProductDetail/@item.Id">@item.Name</a>
+                            </h4>
+                            <p>@item.Description<a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                        </div>
+                        <div class="ratings">
+                            <p>  @item.Price TL </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
-
-
-
-
-
+            }
+        </div>
     </div>
-
 </div>
 

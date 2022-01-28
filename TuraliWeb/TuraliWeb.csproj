@@ -104,6 +104,7 @@
     <Content Include="Content\nav.css" />
     <Content Include="Content\render.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\slide.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Image\sepet.jpg" />
@@ -193,6 +194,7 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Home\AllProductsList.cshtml" />
     <Content Include="Views\Home\ProductDetail.cshtml" />
+    <Content Include="Views\Home\UcBoyut.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -202,6 +204,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Identity\" />
     <Folder Include="Image\Categories\SubCategories\SubSubCategories\Products\" />
     <Folder Include="PDF\" />
   </ItemGroup>

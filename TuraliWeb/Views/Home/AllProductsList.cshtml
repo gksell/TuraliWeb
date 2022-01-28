@@ -37,33 +37,38 @@
             color: var(--color-two);
             margin-right: 8px;
         }
-
+    
+        
 </style>
-<h2>AllProductsList</h2>
+<h1  class="text-center font-weight-bold ">Tüm Ürünler Listesi</h1>
+<hr />
+<div class="container  my-5">
+    <div class="col-md-12">
+        <div class="row  ">
+            @foreach (var item in Model)
+            {
 
-<div class="container">
-    <div class="row">
-        @foreach (var item in Model)
-        {
-            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                <div class="card shadow">
-                    <img src="~/Image/Categories/SubCategories/SubSubCategories/Products/@item.Image" class="card-img-top" alt="..." style="max-height:10rem; max-width:100rem;" >
-                    <div class="card-body">
-                        <h2 class="card-title">@item.Name</h2>
-                        <p class="card-text">@item.Description</p>
-                    </div>
-                    <div class="card-body card-p">
-                        <div class="row">
-                            <div class="col col-xs-4 ">
-                                <i class="fas fa-lira-sign"></i> @item.Price
+                <div class="col-sm-6  col-md-4 ">
+                    <div class="card shadow" >
+                        <img src="~/Image/Categories/SubCategories/SubSubCategories/Products/@item.Image" class="card-img-top" alt="..." style="max-height:10rem; max-width:100rem;">
+                        <div class="card-body">
+                            <h2 class="card-title">@item.Name</h2>
+                            <p class="card-text">@item.Description</p>
+                        </div>
+                        <div class="card-body card-p">
+                            <div class="row">
+                                <div class="col col-xs-4 ">
+                                    <i class="fas fa-lira-sign"></i> @item.Price
+                                </div>
+                                <a href="/Home/ProductDetail/@item.Id" class="btn btn-primary btn-sm" style="color:aliceblue;">Detaylar...</a>
                             </div>
-                            <a href="/Home/ProductDetail/@item.Id" class="btn btn-primary btn-sm" style="color:aliceblue;">Detaylar...</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        }
 
+            }
+
+        </div>
     </div>
 </div>
 

@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "UcBoyut";
+}
+<!--
+<style>
+    .container {
+        width: 100%;
+        height: 100%;
+        max-width: 726px;
+        min-width: 320px;
+        margin: 0 auto;
+    }
+
+    .img-container {
+        border: 1px solid #ccc;
+        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 0;
+        cursor: ew-resize;
+    }
+
+    .img360 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+    }
+
+    img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #preload-imgs {
+        display: none;
+    }
+</style>
+
+<div class="container">
+    <div class="img-container">
+        <div class="img360">
+            <img id="myImg" src="http://woosterwebdesign.com/experiments/images/car_slides/car_(4).jpg" />
+        </div>
+    </div>
+    <div class="caption">
+
+    </div>
+    <div id="preload-imgs"></div>
+</div>
+<script>
+    $(function () {
+
+        var num = 36; // the total number of images
+
+        // Preload all the images into hidden div
+        for (var i = 1; i <= num; i++) {
+            var img = document.createElement('img');
+            img.src = 'http://woosterwebdesign.com/experiments/images/car_slides/car_(' + i + ').jpg';
+            document.getElementById('preload-imgs').appendChild(img);
+        }
+
+        // Control swipes using jquery.touchSwipe.min.js
+        // http://labs.rampinteractive.co.uk/touchSwipe/
+        var swipeOptions =
+        {
+            triggerOnTouchEnd: true,
+            swipeStatus: swipeStatus,
+            allowPageScroll: "vertical",
+            threshold: 75
+        }
+
+        $(function () {
+            imgs = $(".img-container"); // the element that will be swipeable
+            imgs.swipe(swipeOptions);
+        });
+
+        function swipeStatus(event, phase, direction, distance) {
+            var duration = 0;
+            if (direction == "left") {
+                changeImg(distance);
+            }
+            else if (direction == "right") {
+                changeImgR(-distance);
+            }
+        }
+
+        function changeImg(imgNum) {
+
+            // divide by 8 (or any number) to spread
+            // it out so it doesn't load new img
+            // every single px of swipe distance
+            imgNum = Math.floor(imgNum / 8);
+
+            if (imgNum < 1) {
+                imgNum += num;
+            }
+            if (imgNum > num) {
+                imgNum -= num;
+            }
+
+            // change the image src
+            document.getElementById("myImg").src = "http://woosterwebdesign.com/experiments/images/car_slides/car_(" + imgNum + ").jpg";
+        }
+
+        function changeImgR(imgNum) {
+
+            // divide by 8 (or any number) to spread
+            // it out so it doesn't load new img
+            // every single px of swipe distance
+            imgNum = Math.floor(imgNum / 8);
+
+            var num2 = -Math.abs(num);
+            if (imgNum > num2) {
+                imgNum += num;
+            }
+            if (imgNum <= num2) {
+                imgNum += num * 2;
+            }
+
+            // change the image src
+            document.getElementById("myImg").src = "http://woosterwebdesign.com/experiments/images/car_slides/car_(" + imgNum + ").jpg";
+        }
+    })
+</script>
+    -->

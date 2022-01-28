@@ -2,7 +2,8 @@
 /* Layout */
 html, body, div, h1, h2, p,
 a, ul, li, nav {
-    box-sizing: inherit;
+    /*box-sizing: inherit;*/
+    box-sizing:border-box;
     margin: 0;
     padding: 0;
     border: none;

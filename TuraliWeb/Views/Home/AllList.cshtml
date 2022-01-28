@@ -2,17 +2,14 @@
 @{
     ViewBag.Title = "AllList";
 }
+<h1 class="text-center font-weight-bold">Tüm Kategoriler</h1>
 <div class="container my-5">
     <div class="col-md-12">
-
-
-
-        <div class="row">
-
+        <div class="row col-md-12">
             @foreach (var item in Model)
             {
-                <div class="col-sm-4 col-lg-4 col-md-4">
-                    <div class="thumbnail">
+                <div class="col-sm-4  col-md-4">
+                    <div class="thumbnail my-5">
 
                         <img src="~/Image/Categories/@item.Image" />
                         <div class="caption">
@@ -28,13 +25,9 @@
                         </div>
                     </div>
                 </div>
+                <hr />
             }
-
-
-
-
-
+            <hr />
         </div>
-
     </div>
 </div>

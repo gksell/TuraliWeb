@@ -70,15 +70,7 @@ namespace TuraliWeb.Controllers
 
             if (ModelState.IsValid)
             {
-                if (Request.Files.Count > 0)
-                {
-                    string DosyaAdi = Guid.NewGuid().ToString().Replace("-", "");
-                    string uzanti = System.IO.Path.GetExtension(Request.Files[0].FileName);
-                    string tamYolVeri = "~/PDF/" + DosyaAdi + uzanti;
-                    Request.Files[0].SaveAs(Server.MapPath(tamYolVeri));
-                    products.PDF = DosyaAdi + uzanti;
-                    
-                }
+                
                 if (Request.Files.Count > 0)
                 {
                     string DosyaAdi = Guid.NewGuid().ToString().Replace("-", "");
